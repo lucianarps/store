@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'EB Garamond', serif;
+            height: 100vh; /* Usa a altura total da viewport */
+            display: flex;
+            align-items: center; /* Alinha verticalmente ao centro */
+            justify-content: center; /* Alinha horizontalmente ao centro */
+            font-size: 17px;
+            color: #A6A6A6;
+            background-color: #fff;
+        }
+
+        form {
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #A6A6A6;
+            border-radius: 10px;
+            background: #fff;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #A6A6A6;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #A6A6A6;
+            color: white;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #949494;
+        }
+
+        /* Mantendo o resto do estilo conforme o fornecido anteriormente */
+        .header, .desktop-menu ul, .menu-content {
+            width: 100%;
+            text-align: center;
+            background-color: #fff;
+            border-bottom: none;
+            box-shadow: none;
+        }
+
+        .desktop-menu ul, .menu-content ul {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+
+        .desktop-menu li, .menu-content li {
+            display: inline;
+            padding: 0 10px;
+        }
+
+        .desktop-menu a, .menu-content a {
+            text-decoration: none;
+            color: inherit;
+            font-size: 17px;
+        }
+
+        .desktop-menu a:hover, .menu-content a:hover {
+            color: #B9C7BA;
+            background-color: transparent;
+        }
+
+        /*estilo cabeçalho*/
+        header, .desktop-menu ul, .menu-content {
+            width: 100%;
+            text-align: center; /* Centraliza o texto do menu */
+            background-color: #fff; /* Fundo branco para o menu */
+        }
+        
+        .desktop-menu ul, .menu-content ul {
+            padding: 0;
+            margin: 0;
+            list-style-type: none; /* Remove os marcadores de lista */
+        }
+        
+        .desktop-menu li, .menu-content li {
+            display: inline; /* Alinha os itens do menu horizontalmente */
+            padding: 0 10px; /* Espaçamento entre itens do menu */
+        }
+        
+        .desktop-menu a, .menu-content a {
+            text-decoration: none;
+            color: inherit; /* Herda a cor do elemento pai */
+            font-size: 17px; /* Tamanho do texto do menu */
+        }
+        
+        .desktop-menu a:hover, .menu-content a:hover {
+            color: #B9C7BA; /* Muda a cor do texto ao passar o mouse sobre o link */
+            background-color: transparent; /* Mantém o fundo transparente ao passar o mouse */
+        }
+        
+.desktop-menu a {
+    padding: 10px 5px; /* Reduz o padding lateral para os links */
+}
+
+.desktop-menu li:not(:last-child)::after {
+    content: "|"; /* Adiciona o separador */
+    padding-left: 20px; /* Espaço antes do separador */
+    color: #ccc; /* Cor do separador */
+}
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="hamburger-menu">
+            <div class="menu-icon" onclick="toggleHamburgerMenu()">☰</div>
+            <nav class="menu-content" id="menuContent">
+                <ul>
+                    <li><a href="../">Home</a></li>
+                    <li><a href="../english/">Store</a></li>
+                    <li><a href="../about-us">About us</a></li>
+                    <li><a href="https://celery-rhombus-fapz.squarespace.com/">Blog</a></li>
+                    <li><a href="../print/">Print</a></li>
+                </ul>
+            </nav>
+    
+        </div>
+        <nav class="desktop-menu">
+            <ul>
+                <li style="display: inline-block;"><a href="../">HOME</a></li>
+                <li style="display: inline-block;"><a href="../english/">STORE</a></li>
+                <li style="display: inline-block;"><a href="../about-us">ABOUT US</a></li>
+                <li style="display: inline-block;"><a href="https://celery-rhombus-fapz.squarespace.com/">BLOG</a></li>
+                <li style="display: inline-block;"><a href="../print/">PRINT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <p>If you want to get in touch with us, please write to:</br>
+    lulufoundit@gmail.com</p>
+
+    <form action="/submit-contact-form" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone">
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Send</button>
+    </form>
+</body>
+</html>
