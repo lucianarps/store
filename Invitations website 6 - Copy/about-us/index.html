@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us - Lulu Found It</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>/* Estilos para o cabeçalho e navegação */
+        .header, .desktop-menu ul, .menu-content {
+            width: 100%;
+            text-align: center; /* Centraliza o texto do menu */
+            background-color: #fff; /* Fundo branco para o menu */
+        }
+        
+        .desktop-menu ul, .menu-content ul {
+            padding: 0;
+            margin: 0;
+            list-style-type: none; /* Remove os marcadores de lista */
+        }
+        
+        .desktop-menu li, .menu-content li {
+            display: inline; /* Alinha os itens do menu horizontalmente */
+            padding: 0 10px; /* Espaçamento entre itens do menu */
+        }
+        
+        .desktop-menu a, .menu-content a {
+            text-decoration: none;
+            color: inherit; /* Herda a cor do elemento pai */
+            font-size: 17px; /* Tamanho do texto do menu */
+        }
+        
+        .desktop-menu a:hover, .menu-content a:hover {
+            color: #B9C7BA; /* Muda a cor do texto ao passar o mouse sobre o link */
+            background-color: transparent; /* Mantém o fundo transparente ao passar o mouse */
+        }
+        
+        /* Centralização e estilo do conteúdo principal */
+        main {
+            width: 100%; /* Ocupa a largura total */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centraliza os filhos horizontalmente */
+            justify-content: center; /* Centraliza os filhos verticalmente */
+            text-align: center; /* Centraliza o texto dentro de main */
+        }
+        
+        .about-section p {
+            max-width: 800px; /* Limita a largura do parágrafo para melhor legibilidade */
+            margin: auto; /* Centraliza o parágrafo horizontalmente */
+        }
+        .about-section p {
+            max-width: 800px;
+            margin: auto;
+            font-size: 20px; /* Tamanho do texto aumentado para 24px */
+            line-height: 1.6; /* Aumenta o espaçamento entre linhas para melhor legibilidade */
+        }
+        /* Estilos para o carrossel */
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px; /* Limita a largura do carrossel */
+            margin: 20px auto; /* Centraliza horizontalmente e adiciona margem vertical */
+        }
+        
+        .carousel-slide {
+            display: flex;
+            justify-content: center; /* Centraliza a imagem dentro do slide */
+        }
+        
+        .item-image {
+            width: 100%; /* Ajusta a imagem para preencher o slide */
+            max-width: 100%; /* Impede que a imagem exceda a largura do container */
+            height: auto; /* Mantém a proporção da imagem */
+        }
+        
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%); /* Centraliza verticalmente as setas */
+        }
+        
+        .prev { left: 10px; }
+        .next { right: 10px; }
+
+        /* Estilos para o cabeçalho e navegação */
+.header, .desktop-menu ul, .menu-content {
+    width: 100%;
+    text-align: center; /* Centraliza o texto do menu */
+    background-color: #fff; /* Fundo branco para o menu */
+    border-bottom: none; /* Remove qualquer borda inferior que possa estar causando a linha cinza */
+    box-shadow: none; /* Remove qualquer sombra que possa estar causando a linha cinza */
+}
+
+.desktop-menu ul, .menu-content ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none; /* Remove os marcadores de lista */
+}
+
+.desktop-menu li, .menu-content li {
+    display: inline; /* Alinha os itens do menu horizontalmente */
+    padding: 0 10px; /* Espaçamento entre itens do menu */
+}
+
+.desktop-menu a, .menu-content a {
+    text-decoration: none;
+    color: inherit; /* Herda a cor do elemento pai */
+    font-size: 17px; /* Tamanho do texto do menu */
+    background-color: transparent; /* Garante que o fundo seja transparente */
+}
+
+.desktop-menu a:hover, .menu-content a:hover {
+    color: #B9C7BA; /* Muda a cor do texto ao passar o mouse sobre o link */
+    background-color: transparent; /* Mantém o fundo transparente ao passar o mouse */
+}
+
+.desktop-menu a {
+    padding: 10px 5px; /* Reduz o padding lateral para os links */
+}
+
+.desktop-menu li:not(:last-child)::after {
+    content: "|"; /* Adiciona o separador */
+    padding-left: 20px; /* Espaço antes do separador */
+    color: #ccc; /* Cor do separador */
+}
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="hamburger-menu">
+        <div class="menu-icon" onclick="toggleHamburgerMenu()">☰</div>
+        <nav class="menu-content" id="menuContent">
+            <ul>
+                <li><a href="../">Home</a></li>
+                <li><a href="../english/">Store</a></li>
+                <li><a href="../about-us">About us</a></li>
+                <li><a href="https://celery-rhombus-fapz.squarespace.com/">Blog</a></li>
+                <li><a href="../print/">Print</a></li>
+            </ul>
+        </nav>
+
+    </div>
+    <nav class="desktop-menu">
+        <ul>
+            <li style="display: inline-block;"><a href="../">HOME</a></li>
+            <li style="display: inline-block;"><a href="../english/">STORE</a></li>
+            <li style="display: inline-block;"><a href="../about-us">ABOUT US</a></li>
+            <li style="display: inline-block;"><a href="https://celery-rhombus-fapz.squarespace.com/">BLOG</a></li>
+            <li style="display: inline-block;"><a href="../print/">PRINT</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="about-section">
+        <h1>About Us</h1>
+        <p>Our stationery design service offers unique and personalized creations, 
+     <br> specialized in destination weddings and international brides.
+     <br> We understand that every detail of your big day should reflect your <br> 
+          unique story and personality, which is why we are committed to creating <br>
+          stationery pieces that not only impress but also capture the essence of <br>
+          your special celebration, regardless of the location. <br>
+          From elegant invitations to sophisticated menus and ceremony programs, 
+    <br>each piece is designed with a touch of class and creativity, <br>
+        ensuring that your event is as unique and memorable as your love.</p>
+    </section>
+    
+    <div class="carousel-container">
+        <div class="carousel-slide">
+            <img src="/Images/Image1_DustyBlue.jpg" alt="Dusty Blue Invitation" class="item-image">
+        </div>
+        <div class="carousel-slide">
+            <img src="/Images/Image2_VeryPeri.jpg" alt="Very Peri Invitation" class="item-image">
+        </div>
+        <div class="carousel-slide">
+            <img src="/Images/Image3_Terracota.jpg" alt="Terracota Invitation" class="item-image">
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">❮</button>
+        <button class="next" onclick="moveSlide(1)">❯</button>
+    </div>
+</main>
+
+<script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lulu Found It</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap" rel="stylesheet"> <!-- Inclui a fonte EB Garamond -->
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'EB Garamond', serif; /* Usa EB Garamond como fonte */
+    font-size: 17px; /* Define o tamanho padrão da fonte para 17px */
+    color: #A6A6A6; /* Define a cor do texto */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;  !MATT -> This will push content to the center of the page vertically */
+    align-items: center;
+    background-color: #ffffff;
+    text-transform: uppercase;
+  }
+
+  .lottie-wrapper {
+    flex: 0 1 auto;
+    max-height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .links {
+    margin-top: 20px;
+    flex: 0 1 auto;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .link {
+    text-decoration: none;
+    color: #A6A6A6; /* Atualiza a cor do texto dos links */
+    background-color: transparent;
+    font-size: 17px; /* Tamanho da fonte dos links */
+  }
+
+  .link:hover {
+    text-decoration: underline; /* Estilo ao passar o mouse sobre o link */
+  }
+</style>
+</head>
+<body>
+
+  <div class="lottie-wrapper">
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+    <dotlottie-player src="https://lottie.host/da882875-baf2-4496-bd66-a3c634231cf7/FIwX07fuMs.json" background="transparent" speed="1" style="width: 60%; height: 100%;" loop autoplay></dotlottie-player>
+  </div>
+
+  <div class="links">
+    <a href="/portuguese" class="link">Portuguese</a>
+    <a> | </a>
+    <a href="./english" class="link">English</a>
+  </div>
+
+</body>
+</html>

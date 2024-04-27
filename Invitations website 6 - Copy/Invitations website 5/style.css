@@ -1,0 +1,374 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'EB Garamond', serif; /* Usa Garamond como a fonte padrão */
+    color: #A6A6A6; /* Cor padrão do texto */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo na vertical */
+    /* justify-content: center;  !MATT -> This will push content to the center of the page vertically */
+    background: #fff; /* Fundo branco para todo o conteúdo da página */
+}
+
+.header {
+    width: 100%;
+    background: #ffffff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative; /* Ajustado para ser sempre relative */
+    z-index: 1000; /* Garante que o cabeçalho esteja sempre no topo */
+}
+
+.hamburger-menu {
+    position: relative; /* Corrigido para ser sempre relative */
+}
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.menu-content {
+    display: none;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.menu-content.show {
+    display: block; /* Empurra o conteúdo para baixo quando visível */
+}
+
+.menu-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px solid #eee;
+}
+
+.menu-content a:last-child {
+    border-bottom: none;
+}
+
+.main {
+    padding-top: 60px; /* Espaço adequado para o cabeçalho */
+}
+
+/* Consolidar e remover duplicações dos estilos do grid, mantendo apenas um conjunto de regras para os grids. */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+.grid-item {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s ease;
+    width: 300px; /* Exemplo de largura padrão */
+    height: 300px; /* Exemplo de altura padrão */
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
+}
+
+.item-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*estilos botão comprar*/
+/* Estilo para os botões de Comprar */
+.button-buy {
+    background-color: #f0f0f0; /* Cinza claro para o fundo do botão */
+    color: black; /* Letras em preto */
+    border: none; /* Sem borda externa */
+    padding: 10px 20px; /* Padding para aumentar a área clicável e conforto visual */
+    font-size: 16px; /* Tamanho do texto */
+    cursor: pointer; /* Cursor em forma de mão para indicar clicabilidade */
+    border-radius: 5px; /* Cantos arredondados */
+    display: block; /* Torna o botão um bloco para alinhar corretamente abaixo da imagem */
+    width: 100%; /* Faz o botão esticar para ocupar todo o espaço disponível no container */
+    box-sizing: border-box; /* Garante que o padding não afete a largura definida */
+    margin-top: 5px; /* Espaço entre a imagem e o botão */
+    text-align: center; /* Alinha o texto no centro do botão */
+}
+
+.button-buy:hover {
+    background-color: #e0e0e0; /* Um cinza um pouco mais escuro no hover para feedback visual */
+}
+
+/* Estilo para os itens da grid, garantindo que o botão fique abaixo da imagem */
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo no eixo cruzado */
+    margin-bottom: 20px; /* Espaço entre os itens do grid */
+}
+
+.item-image {
+    width: 100%; /* Garante que a imagem preencha o container */
+    border-radius: 5px; /* Cantos arredondados para a imagem */
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* Limita a largura máxima do carrossel */
+}
+
+.carousel-slide {
+    display: none; /* Esconde todas as imagens inicialmente */
+    width: 100%;
+    position: absolute;
+}
+
+.item-image {
+    width: 100%;
+    height: auto;
+    display: block; /* Garante que a imagem preencha o espaço do carrossel-slide */
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+/*centralizar pagina*/
+.header, main {
+    width: 100%; /* Define a largura máxima */
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* Ajuste conforme necessário para seu design */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.carousel-slide {
+    display: none; /* Esconde todas as imagens inicialmente */
+    width: 100%;
+    justify-content: center;
+}
+
+.item-image {
+    width: auto; /* Mantém a largura original da imagem */
+    max-width: 100%; /* Assegura que a imagem não ultrapasse a largura do contêiner */
+    height: auto; /* Mantém a altura proporcional */
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    background-color: rgba(0,0,0,0.5);
+    border: none;
+    outline: none;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.next {
+    right: 10px;
+}
+
+.prev {
+    left: 10px;
+}
+
+/* Carrosel slider*/
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* Limita a largura máxima do carrossel */
+}
+
+.carousel-slide {
+    display: none; /* Esconde todas as imagens inicialmente */
+    width: 100%;
+    position: absolute;
+}
+
+.item-image {
+    width: 100%;
+    height: auto;
+    display: block; /* Garante que a imagem preencha o espaço do carrossel-slide */
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%; /* Alinha verticalmente ao meio */
+    transform: translateY(-50%); /* Ajusta a posição vertical para o meio exato */
+    width: auto;
+    padding: 16px;
+    color: rgb(118, 118, 118);
+    font-weight: bold;
+    font-size: 24px; /* Aumenta o tamanho da fonte das setas */
+    transition: 0.6s ease;
+    user-select: none;
+    background-color: rgb(255, 255, 255); /* Fundo semi-transparente para visibilidade em qualquer imagem de fundo */
+    border: none; /* Remove bordas padrão */
+    outline: none; /* Remove o contorno ao focar com o teclado ou clicar */
+}
+
+.next {
+    right: 10px; /* Posiciona à direita, com uma margem da borda */
+}
+
+.prev {
+    left: 10px; /* Posiciona à esquerda, com uma margem da borda */
+}
+
+/* Melhora a visibilidade das setas ao passar o mouse */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.desktop-menu {
+    display: none;
+}
+
+@media only screen and (min-width: 900px) {
+    .desktop-menu{
+        display: block;
+    }
+
+    .hamburger-menu{
+        display: none;
+    }
+    
+}
+
+/* pagina english responsiva */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* 1 coluna por padrão, bom para dispositivos móveis */
+    grid-gap: 20px; /* Espaçamento entre os itens */
+    padding: 20px; /* Padding ao redor do grid */
+}
+
+.grid-item {
+    background: #f0f0f0; /* Cor de fundo para cada item */
+    padding: 20px; /* Espaço dentro de cada item */
+    border-radius: 10px; /* Bordas arredondadas */
+    text-align: center; /* Centraliza o texto dentro do item */
+}
+
+/* Media queries para telas maiores */
+@media (min-width: 800px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas para tablets */
+    }
+}
+
+@media (min-width: 1200px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 colunas para desktops pequenos */
+    }
+}
+
+@media (min-width: 1600px) {
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr); /* 4 colunas para desktops maiores */
+    }
+}
+
+/*Estilo dos menus*/
+/* Importa a fonte EB Garamond do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap');
+
+/* Estilos do menu */
+.navbar, .menu-content a {
+    font-family: 'EB Garamond', serif; /* Aplica a fonte EB Garamond */
+    font-size: 24px; /* Define o tamanho da fonte para 24px */
+    color: #A6A6A6; /* Define a cor do texto do menu */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    text-transform: uppercase; /* Transforma o texto do menu em letras maiúsculas */
+}
+
+.menu-content a {
+    padding: 10px 20px; /* Ajusta o espaçamento ao redor dos links para melhor acessibilidade */
+    display: block; /* Faz com que cada link ocupe uma linha completa, útil para cliques fáceis */
+}
+
+.menu-content a:hover {
+    color: #B9C7BA; /* Muda a cor do texto ao passar o mouse sobre o link */
+    background-color: #f0f0f0; /* Opcional: adiciona um fundo sutil ao hover */
+}
+
+/*centraliza rids na pagina*/
+.store-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que os itens do grid quebrem a linha */
+}
+
+.grid-container {
+    display: grid;
+    justify-content: center; /* Centraliza os itens do grid horizontalmente */
+    align-items: center;
+    gap: 20px; /* Espaço entre os grids */
+    padding: 20px;
+    width: 80vw;
+}
+
+.grid-item {
+    flex: 1 1 200px; /* Cresce e encolhe, com base de 200px */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    text-align: center;
+}
+
+.item-image {
+    width: 100%;
+    height: auto;
+}
