@@ -5,7 +5,8 @@
     <title>English - Invitations and Stationery</title>
     <link rel="stylesheet" href="../style.css">
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap" rel="stylesheet">
-    <style>/* Estilos para o cabeçalho e navegação */
+    <style>
+        /* Estilos para o cabeçalho e navegação */
         .header, .desktop-menu ul, .menu-content {
             width: 100%;
             text-align: center; /* Centraliza o texto do menu */
@@ -40,8 +41,7 @@
             display: flex;
             flex-direction: column;
             align-items: center; /* Centraliza os filhos horizontalmente */
-            justify-content: center
-            /* justify-content: center;  !MATT -> This will push content to the center of the page vertically */
+            justify-content: center; /* Centraliza os filhos verticalmente */
             text-align: center; /* Centraliza o texto dentro de main */
         }
         
@@ -79,46 +79,57 @@
         .next { right: 10px; }
 
         /* Estilos para o cabeçalho e navegação */
-.header, .desktop-menu ul, .menu-content {
-    width: 100%;
-    text-align: center; /* Centraliza o texto do menu */
-    background-color: #fff; /* Fundo branco para o menu */
-    border-bottom: none; /* Remove qualquer borda inferior que possa estar causando a linha cinza */
-    box-shadow: none; /* Remove qualquer sombra que possa estar causando a linha cinza */
-}
+        .header, .desktop-menu ul, .menu-content {
+            width: 100%;
+            text-align: center; /* Centraliza o texto do menu */
+            background-color: #fff; /* Fundo branco para o menu */
+            border-bottom: none; /* Remove qualquer borda inferior que possa estar causando a linha cinza */
+            box-shadow: none; /* Remove qualquer sombra que possa estar causando a linha cinza */
+        }
+        
+        .desktop-menu ul, .menu-content ul {
+            padding: 0;
+            margin: 0;
+            list-style-type: none; /* Remove os marcadores de lista */
+        }
+        
+        .desktop-menu li, .menu-content li {
+            display: inline; /* Alinha os itens do menu horizontalmente */
+            padding: 0 10px; /* Espaçamento entre itens do menu */
+        }
+        
+        .desktop-menu a, .menu-content a {
+            text-decoration: none;
+            color: inherit; /* Herda a cor do elemento pai */
+            font-size: 17px; /* Tamanho do texto do menu */
+            background-color: transparent; /* Garante que o fundo seja transparente */
+        }
+        
+        .desktop-menu a:hover, .menu-content a:hover {
+            color: #B9C7BA; /* Muda a cor do texto ao passar o mouse sobre o link */
+            background-color: transparent; /* Mantém o fundo transparente ao passar o mouse */
+        }
+        
+        .desktop-menu a {
+            padding: 10px 5px; /* Reduz o padding lateral para os links */
+        }
+        
+        .desktop-menu li:not(:last-child)::after {
+            content: "|"; /* Adiciona o separador */
+            padding-left: 20px; /* Espaço antes do separador */
+            color: #ccc; /* Cor do separador */
+        }
 
-.desktop-menu ul, .menu-content ul {
-    padding: 0;
-    margin: 0;
-    list-style-type: none; /* Remove os marcadores de lista */
-}
-
-.desktop-menu li, .menu-content li {
-    display: inline; /* Alinha os itens do menu horizontalmente */
-    padding: 0 10px; /* Espaçamento entre itens do menu */
-}
-
-.desktop-menu a, .menu-content a {
-    text-decoration: none;
-    color: inherit; /* Herda a cor do elemento pai */
-    font-size: 17px; /* Tamanho do texto do menu */
-    background-color: transparent; /* Garante que o fundo seja transparente */
-}
-
-.desktop-menu a:hover, .menu-content a:hover {
-    color: #B9C7BA; /* Muda a cor do texto ao passar o mouse sobre o link */
-    background-color: transparent; /* Mantém o fundo transparente ao passar o mouse */
-}
-
-.desktop-menu a {
-    padding: 10px 5px; /* Reduz o padding lateral para os links */
-}
-
-.desktop-menu li:not(:last-child)::after {
-    content: "|"; /* Adiciona o separador */
-    padding-left: 20px; /* Espaço antes do separador */
-    color: #ccc; /* Cor do separador */
-}
+        /* Media queries */
+        @media screen and (max-width: 600px) {
+            .grid-container {
+                display: block;
+            }
+            
+            .grid-item {
+                margin-bottom: 20px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -179,18 +190,6 @@
                 <img src="../Images/Image4_Lilies.jpg" alt="Terracota Invitation" class="item-image">
                 <p>Terracota Invitation - $0</p>
                 <button onclick="buyProduct('Terracota Invitation', 30, 'https://www.canva.com/design/DAFmgpYCNxY/FLKpHofdbizLQbwtKrSzFg/edit?utm_content=DAFmgpYCNxY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton')">Purchase</button>
-            </div>
-             <!-- Produto 5 -->
-             <div class="grid-item">
-                <img src="../Images/Image5_photo.jpg" alt="Photo Invitation" class="item-image">
-                <p>Photo Invitation - $0</p>
-                <button onclick="buyProduct('Photo Invitation', 30, 'https://www.canva.com/design/DAFlcj6yRVo/cpSN34Mlh9yUklTMM6xDVg/edit?utm_content=DAFlcj6yRVo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton')">Purchase</button>
-            </div>
-            <!-- Produto 6 -->
-            <div class="grid-item">
-                <img src="../Images/Image6_Renata.jpg" alt="Renata Wedding Set" class="item-image">
-                <p>Photo Invitation - $0</p>
-                <button onclick="buyProduct('Renata Wedding Set', 30, 'https://www.canva.com/design/DAFllJXa5Q4/hh_cniPRAmyWzTUawjL5gw/edit?utm_content=DAFllJXa5Q4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton')">Purchase</button>
             </div>
             </div>
         </main>

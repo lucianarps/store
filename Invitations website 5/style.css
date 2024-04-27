@@ -8,7 +8,7 @@ body, html {
     display: flex;
     flex-direction: column;
     align-items: center; /* Centraliza o conteúdo na vertical */
-    justify-content: center;
+    /* justify-content: center;  !MATT -> This will push content to the center of the page vertically */
     background: #fff; /* Fundo branco para todo o conteúdo da página */
 }
 
@@ -301,19 +301,19 @@ body, html {
 }
 
 /* Media queries para telas maiores */
-@media (min-width: 600px) {
+@media (min-width: 800px) {
     .grid-container {
         grid-template-columns: repeat(2, 1fr); /* 2 colunas para tablets */
     }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1200px) {
     .grid-container {
         grid-template-columns: repeat(3, 1fr); /* 3 colunas para desktops pequenos */
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1600px) {
     .grid-container {
         grid-template-columns: repeat(4, 1fr); /* 4 colunas para desktops maiores */
     }
@@ -351,16 +351,16 @@ body, html {
 }
 
 .grid-container {
-    display: flex;
-    flex-wrap: wrap; /* Permite múltiplas linhas */
+    display: grid;
     justify-content: center; /* Centraliza os itens do grid horizontalmente */
+    align-items: center;
     gap: 20px; /* Espaço entre os grids */
     padding: 20px;
+    width: 80vw;
 }
 
 .grid-item {
     flex: 1 1 200px; /* Cresce e encolhe, com base de 200px */
-    max-width: calc(25% - 20px); /* Ajuste para quatro itens por linha com 20px de gap */
     display: flex;
     flex-direction: column;
     align-items: center;

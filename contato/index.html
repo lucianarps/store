@@ -13,7 +13,7 @@
             height: 100vh; /* Usa a altura total da viewport */
             display: flex;
             align-items: center; /* Alinha verticalmente ao centro */
-            /* justify-content: center;  !MATT -> This will push content to the center of the page vertically */
+            justify-content: center; /* Alinha horizontalmente ao centro */
             font-size: 17px;
             color: #A6A6A6;
             background-color: #fff;
@@ -111,15 +111,15 @@
             background-color: transparent; /* Mantém o fundo transparente ao passar o mouse */
         }
         
-        .desktop-menu a {
-            padding: 10px 5px; /* Reduz o padding lateral para os links */
-        }
+.desktop-menu a {
+    padding: 10px 5px; /* Reduz o padding lateral para os links */
+}
 
-        .desktop-menu li:not(:last-child)::after {
-            content: "|"; /* Adiciona o separador */
-            padding-left: 20px; /* Espaço antes do separador */
-            color: #ccc; /* Cor do separador */
-        }
+.desktop-menu li:not(:last-child)::after {
+    content: "|"; /* Adiciona o separador */
+    padding-left: 20px; /* Espaço antes do separador */
+    color: #ccc; /* Cor do separador */
+}
     </style>
 </head>
 <body>

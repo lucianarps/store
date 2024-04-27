@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>English - Invitations and Stationery</title>
+    <title>About Us - Lulu Found It</title>
     <link rel="stylesheet" href="../style.css">
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap" rel="stylesheet">
     <style>/* Estilos para o cabeçalho e navegação */
         .header, .desktop-menu ul, .menu-content {
             width: 100%;
@@ -40,8 +39,7 @@
             display: flex;
             flex-direction: column;
             align-items: center; /* Centraliza os filhos horizontalmente */
-            justify-content: center
-            /* justify-content: center;  !MATT -> This will push content to the center of the page vertically */
+            justify-content: center; /* Centraliza os filhos verticalmente */
             text-align: center; /* Centraliza o texto dentro de main */
         }
         
@@ -49,7 +47,12 @@
             max-width: 800px; /* Limita a largura do parágrafo para melhor legibilidade */
             margin: auto; /* Centraliza o parágrafo horizontalmente */
         }
-        
+        .about-section p {
+            max-width: 800px;
+            margin: auto;
+            font-size: 20px; /* Tamanho do texto aumentado para 24px */
+            line-height: 1.6; /* Aumenta o espaçamento entre linhas para melhor legibilidade */
+        }
         /* Estilos para o carrossel */
         .carousel-container {
             position: relative;
@@ -123,78 +126,57 @@
 </head>
 <body>
 
-<header>
-   <!-- Menu Hamburguer -->
+<header class="header">
     <div class="hamburger-menu">
         <div class="menu-icon" onclick="toggleHamburgerMenu()">☰</div>
         <nav class="menu-content" id="menuContent">
             <ul>
                 <li><a href="../">Home</a></li>
-                <li><a href="./">Store</a></li>
-                <li><a href="../about-us/">About us</a></li>
+                <li><a href="../english/">Store</a></li>
+                <li><a href="../about-us">About us</a></li>
                 <li><a href="https://celery-rhombus-fapz.squarespace.com/">Blog</a></li>
                 <li><a href="../print/">Print</a></li>
             </ul>
         </nav>
+
     </div>
+    <nav class="desktop-menu">
+        <ul>
+            <li style="display: inline-block;"><a href="../">HOME</a></li>
+            <li style="display: inline-block;"><a href="../english/">STORE</a></li>
+            <li style="display: inline-block;"><a href="../about-us">ABOUT US</a></li>
+            <li style="display: inline-block;"><a href="https://celery-rhombus-fapz.squarespace.com/">BLOG</a></li>
+            <li style="display: inline-block;"><a href="../print/">PRINT</a></li>
+        </ul>
+    </nav>
 </header>
 
-</div>
-<nav class="desktop-menu">
-    <ul>
-        <li style="display: inline-block;"><a href="../">HOME</a></li>
-        <li style="display: inline-block;"><a href="../english/">STORE</a></li>
-        <li style="display: inline-block;"><a href="../about-us">ABOUT US</a></li>
-        <li style="display: inline-block;"><a href="https://celery-rhombus-fapz.squarespace.com/">BLOG</a></li>
-        <li style="display: inline-block;"><a href="../print/">PRINT</a></li>
-    </ul>
-</nav>
-
-<!--Loja-->
-<main class="store-container">
-    <div class="grid-container">
-        <!-- Repetir para cada item do grid -->
-        <main class="store-container">
-            <div class="grid-container">
-                <!-- Produto 1 -->
-                <div class="grid-item">
-                    <img src="../Images/Image1_DustyBlue.jpg" alt="Dusty Blue Invitation" class="item-image">
-                    <p>Dusty Blue Invitation - $0</p>
-                    <button onclick="buyProduct('Dusty Blue Invitation', 10, 'https://www.canva.com/design/DAFli_3tg4Y/HF-xPFeiDvZ3LWYinGNvpQ/edit')">Purchase</button>
-                </div>
-                <!-- Produto 2 -->
-                <div class="grid-item">
-                    <img src="../Images/Image2_VeryPeri.jpg" alt="Very Peri Invitation" class="item-image">
-                    <p>Very Peri Invitation - $0</p>
-                    <button onclick="buyProduct('Very Peri Invitation', 20, 'https://www.canva.com/design/DAGCPCdG5-o/qsQ2czqE9qgIh0argsG3BA/edit')">Purchase</button>
-                </div>
-                <!-- Produto 3 -->
-                <div class="grid-item">
-                    <img src="../Images/Image3_Terracota.jpg" alt="Terracota Invitation" class="item-image">
-                    <p>Terracota Invitation - $0</p>
-                    <button onclick="buyProduct('Terracota Invitation', 30, 'https://www.canva.com/design/DAGCPOKVnwA/IJPOusx2tl1irUdM7t0Xmg/edit')">Purchase</button>
-                </div>
-             <!-- Produto 4 -->
-             <div class="grid-item">
-                <img src="../Images/Image4_Lilies.jpg" alt="Terracota Invitation" class="item-image">
-                <p>Terracota Invitation - $0</p>
-                <button onclick="buyProduct('Terracota Invitation', 30, 'https://www.canva.com/design/DAFmgpYCNxY/FLKpHofdbizLQbwtKrSzFg/edit?utm_content=DAFmgpYCNxY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton')">Purchase</button>
-            </div>
-             <!-- Produto 5 -->
-             <div class="grid-item">
-                <img src="../Images/Image5_photo.jpg" alt="Photo Invitation" class="item-image">
-                <p>Photo Invitation - $0</p>
-                <button onclick="buyProduct('Photo Invitation', 30, 'https://www.canva.com/design/DAFlcj6yRVo/cpSN34Mlh9yUklTMM6xDVg/edit?utm_content=DAFlcj6yRVo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton')">Purchase</button>
-            </div>
-            <!-- Produto 6 -->
-            <div class="grid-item">
-                <img src="../Images/Image6_Renata.jpg" alt="Renata Wedding Set" class="item-image">
-                <p>Photo Invitation - $0</p>
-                <button onclick="buyProduct('Renata Wedding Set', 30, 'https://www.canva.com/design/DAFllJXa5Q4/hh_cniPRAmyWzTUawjL5gw/edit?utm_content=DAFllJXa5Q4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton')">Purchase</button>
-            </div>
-            </div>
-        </main>
-        <!-- Continue adding grid items for each product -->
+<main>
+    <section class="about-section">
+        <h1>About Us</h1>
+        <p>Our stationery design service offers unique and personalized creations, 
+     <br> specialized in destination weddings and international brides.
+     <br> We understand that every detail of your big day should reflect your <br> 
+          unique story and personality, which is why we are committed to creating <br>
+          stationery pieces that not only impress but also capture the essence of <br>
+          your special celebration, regardless of the location. <br>
+          From elegant invitations to sophisticated menus and ceremony programs, 
+    <br>each piece is designed with a touch of class and creativity, <br>
+        ensuring that your event is as unique and memorable as your love.</p>
+    </section>
+    
+    <div class="carousel-container">
+        <div class="carousel-slide">
+            <img src="/Images/Image1_DustyBlue.jpg" alt="Dusty Blue Invitation" class="item-image">
+        </div>
+        <div class="carousel-slide">
+            <img src="/Images/Image2_VeryPeri.jpg" alt="Very Peri Invitation" class="item-image">
+        </div>
+        <div class="carousel-slide">
+            <img src="/Images/Image3_Terracota.jpg" alt="Terracota Invitation" class="item-image">
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">❮</button>
+        <button class="next" onclick="moveSlide(1)">❯</button>
     </div>
 </main>
 
